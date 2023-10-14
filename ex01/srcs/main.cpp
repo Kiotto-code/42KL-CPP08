@@ -10,8 +10,9 @@ int main()
 		test.addNumber(17);
 		test.addNumber(14);
 		test.addNumber(5);
-		test.showNumber();
-		test.shortestSpan();
+		// test.addNumber(5);
+		// test.showNumber();
+		// test.shortestSpan();
 		std::cout << "longestSpan" <<  test.longestSpan() << std::endl;
 		std::cout << "shortestSpan" <<  test.shortestSpan() << std::endl;
 	}
@@ -42,12 +43,12 @@ int main()
 			std::cout << "Error:\t" << e.what() << std::endl;
 		}
 	}
-	//Volume too low (less than 2)
+	//Volume too low (less than 2; only one)
 	{
 		try
 		{
 			Span test(5);
-			test.addNumber(10);
+			// test.addNumber(10);
 			test.showNumber();
 			test.shortestSpan();
 			std::cout << "longestSpan" <<  test.longestSpan() << std::endl;
