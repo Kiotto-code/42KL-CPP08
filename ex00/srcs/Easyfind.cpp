@@ -1,4 +1,4 @@
-#include "easyfind.hpp"
+#include "Easyfind.hpp"
 
 // const char *NotFoundException::what() const throw()
 // {
