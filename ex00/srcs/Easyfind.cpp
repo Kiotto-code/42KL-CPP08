@@ -1,9 +1,9 @@
 #include "easyfind.hpp"
 
-const char *NotFoundException::what() const throw()
-{
-	return "Huh? What is that?";
-}
+// const char *NotFoundException::what() const throw()
+// {
+// 	return "Huh? What is that?";
+// }
 
 int main()
 {

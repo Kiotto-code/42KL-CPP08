@@ -3,6 +3,7 @@
 
  #include <iostream>
  #include <stack>
+ #include "Color.hpp"
 
 
 
@@ -35,9 +36,16 @@ class MutantStack
         MutantStack& operator=(const MutantStack& src);
 
         typedef typename std::stack<T>::container_type::iterator iterator;
-        typedef typename std::stack<T>::container_type::iterator reverse_iterator;
-        typedef typename std::stack<T>::container_type::iterator const_iterator;
-        typedef typename std::stack<T>::container_type::iterator const_reverse_iterator;
+        typedef typename std::stack<T>::container_type::reverse_iterator reverse_iterator;
+        typedef typename std::stack<T>::container_type::const_iterator const_iterator;
+        typedef typename std::stack<T>::container_type::const_reverse_iterator const_reverse_iterator;
+
+
+        // typedef typename std::stack<T>::container_type container_type;
+        // typedef typename container_type::iterator iterator;
+        // typedef typename container_type::const_iterator const_iterator;
+        // typedef typename container_type::reverse_iterator reverse_iterator;
+        // typedef typename container_type::const_reverse_iterator const_reverse_iterator; 
 
 
         // expose just the iterators of the underlying container
@@ -50,6 +58,8 @@ class MutantStack
         const_reverse_iterator rbegin() const;
         const_reverse_iterator rend() const;
 };
+
+# define cterm() std::cin.get(); std::cout << "\e[1;1H\e[2J";
 
 # include "MutantStack.tpp"
 #endif
